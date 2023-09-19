@@ -3,6 +3,6 @@
   tasks:
     - name: install mc
       apt:
-        name:mc
+        name: mc
         state: present
         
