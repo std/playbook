@@ -1,11 +1,12 @@
----
-- hosts: tmpl
-    - name: install mc htop
+- name: Ansible apt module 
+  hosts: tmpl
+  become: yes
+  tasks:
+    - name: Ansible apt to install multiple packages -
+      register: updatesys
       apt:
-        name: 
-         - mc
-         - htop
+        update_cache: yes
+        name:
+          - htop
+          - mc
         state: present
-        update_cache: true
-        
-      update_cache: true
