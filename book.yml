@@ -17,7 +17,7 @@
           - jq
           - pkg-config
           - curl 
-          - clang- 
+          - clang
           - build-essential
           - hwloc
           - libhwloc-dev
