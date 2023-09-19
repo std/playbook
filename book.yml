@@ -1,15 +1,12 @@
 ---
 - hosts: tmpl
   tasks:
-    - name: install mc
+    - name: install mc htop
       apt:
-        name: mc
+        name: 
+         - mc
+         - htop
         state: present
+        update_cache: true
         
-    - name: install htop
-      apt:
-        name: htop
-        state: present
-
-      
-        
+      update_cache: true
