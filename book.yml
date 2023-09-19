@@ -1,6 +1,5 @@
 ---
 - hosts: tmpl
-  tasks:
     - name: install mc htop
       apt:
         name: 
