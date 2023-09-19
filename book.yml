@@ -6,7 +6,7 @@
         name: mc
         state: present
         
-    - name: install mc
+    - name: install htop
       apt:
         name: htop
         state: present
