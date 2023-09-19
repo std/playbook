@@ -1,5 +1,5 @@
 ---
-- hosts: all
+- hosts: miner2
   tasks:
     - name: Hello World!
       debug:
