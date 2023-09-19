@@ -6,7 +6,6 @@
       register: updatesys
       apt:
         update_cache: yes
-        upgrade: yes
         name:
           - htop
           - mc
@@ -24,3 +23,7 @@
           - libhwloc-dev
           - wget
         state: present
+    - name: Ansible apt upgrade
+      register: updatesys
+      apt:
+        upgrade: yes
