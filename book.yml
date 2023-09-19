@@ -1,5 +1,5 @@
 ---
-- hosts: pg
+- hosts: worker1
   tasks:
     - name: Hello World!
       debug:
