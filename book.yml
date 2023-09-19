@@ -1,5 +1,5 @@
 ---
-- hosts: lotus_workers
+- hosts: tmpl
   tasks:
     - name: Hello World!
       debug:
