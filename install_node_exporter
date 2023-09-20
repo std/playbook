@@ -1,1 +1,3 @@
-
+- hosts: tmpl
+  roles:
+    - prometheus.prometheus.node_exporter
