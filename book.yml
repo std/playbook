@@ -1,5 +1,5 @@
 - name: Ansible apt module 
-  hosts: tmpl
+  hosts: worker3
   become: yes
   tasks:
     - name: Ansible apt to install multiple packages -
