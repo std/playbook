@@ -1,0 +1,19 @@
+- name: Ansible apt module 
+  hosts: proxy
+  become: yes
+  tasks:
+    - name: Ansible apt to install multiple packages -
+      register: updatesys
+      apt:
+        update_cache: yes
+        name:
+          - htop
+          - mc
+          - git
+          - curl 
+          - wget
+        state: present
+    - name: Ansible apt upgrade
+      register: updatesys
+      apt:
+        upgrade: yes
