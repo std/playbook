@@ -1,5 +1,5 @@
 - name: Ansible apt module 
-  hosts: worker3
+  hosts: proxy
   become: yes
   tasks:
     - name: Ansible apt to install multiple packages -
