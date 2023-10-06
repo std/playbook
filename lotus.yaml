@@ -1,0 +1,29 @@
+- name: Ansible apt module 
+  hosts: proxy
+  become: yes
+  tasks:
+    - name: Ansible apt to install multiple packages -
+      register: updatesys
+      apt:
+        update_cache: yes
+        name:
+          - htop
+          - mc
+          - mesa-opencl-icd 
+          - ocl-icd-opencl-dev
+          - gcc
+          - git
+          - bzr
+          - jq
+          - pkg-config
+          - curl 
+          - clang
+          - build-essential
+          - hwloc
+          - libhwloc-dev
+          - wget
+        state: present
+    - name: Ansible apt upgrade
+      register: updatesys
+      apt:
+        upgrade: yes
