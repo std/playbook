@@ -7,20 +7,6 @@
       apt:
         update_cache: yes
         name:
-          - htop
-          - mc
-          - mesa-opencl-icd 
-          - ocl-icd-opencl-dev
-          - gcc
-          - git
-          - bzr
-          - jq
-          - pkg-config
-          - curl 
-          - clang
-          - build-essential
-          - hwloc
-          - libhwloc-dev
           - wget
         state: present
     - name: Ansible apt upgrade
