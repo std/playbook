@@ -1,5 +1,5 @@
 - name: Ansible apt module 
-  hosts: proxy
+  hosts: lotus2
   become: yes
   tasks:
     - name: Ansible apt to install multiple packages -
