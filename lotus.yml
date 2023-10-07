@@ -1,5 +1,5 @@
 - name: Ansible apt module 
-  hosts: lotus-node2
+  hosts: new_lotus_nodes
   become: yes
   tasks:
     - name: Ansible apt to install multiple packages -
