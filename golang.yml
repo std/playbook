@@ -1,0 +1,12 @@
+- hosts: new_lotus_nodes
+  tasks:
+  - import_role:
+      name: abdennour.golang
+    vars:
+      golang_version: "1.14"
+      golang_packages:
+      - github.com/gorilla/mux
+      - go.mongodb.org/mongo-driver/mongo
+      golang_users:
+      - "{{ ansible_ssh_user }}"
+    become: yes
