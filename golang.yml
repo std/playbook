@@ -7,6 +7,5 @@
       golang_packages:
       - github.com/gorilla/mux
       - go.mongodb.org/mongo-driver/mongo
-      golang_users:
-      - "{{ ansible_ssh_user }}"
+
     become: yes
