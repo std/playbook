@@ -30,7 +30,7 @@
     
     - name: make-ffi-build
       ansible.builtin.shell:
-        cmd: make-ffi-build
+        cmd: sh make-ffi-build
         chdir: /root/lotus
     
     - name: Ansible apt upgrade
