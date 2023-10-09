@@ -20,7 +20,7 @@
         # You can also use the 'cmd' parameter instead of free form format.
     - name: make-ffi-build
       ansible.builtin.shell:
-        cmd: make clean
+        cmd: make clean && make clean
         chdir: /root/lotus/lotus
     
     - name: Ansible apt upgrade
