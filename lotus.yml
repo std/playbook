@@ -14,7 +14,7 @@
     - import_role:
         name: abdennour.golang
       vars:
-        golang_version: "1.21.2"
+        golang_version: "1.19.8"
       become: yes
       
     - name: Git checkout
