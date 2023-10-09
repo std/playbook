@@ -20,10 +20,12 @@
         # You can also use the 'cmd' parameter instead of free form format.
     - name: make-ffi-build
       ansible.builtin.shell:
-        cmd: make clean && make clean
+        cmd: make clean &&  env RUSTFLAGS="-C target-cpu=native -g" FFI_USE_GPU2=1 FFI_BUILD_FROM_SOURCE=1 make all 
         chdir: /root/lotus/lotus
     
     - name: Ansible apt upgrade
       register: updatesys
       apt:
         upgrade: yes
+
+    - debug: var=ps.stdout_lines
