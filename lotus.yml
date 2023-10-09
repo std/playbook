@@ -14,7 +14,7 @@
     - name: Git checkout
       ansible.builtin.git:
         repo: 'https://github.com/filecoin-project/lotus.git'
-        dest: /root/lotus
+        dest: /root/lotus/lotus
         version: v1.23.0
     
     - name: Ansible apt upgrade
