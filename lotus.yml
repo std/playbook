@@ -10,6 +10,13 @@
           - mc
           - wget
         state: present
+
+    - name: Git checkout
+      ansible.builtin.git:
+        repo: 'https://github.com/filecoin-project/lotus.git'
+        dest: /root/lotus
+        version: v1.23.0
+    
     - name: Ansible apt upgrade
       register: updatesys
       apt:
