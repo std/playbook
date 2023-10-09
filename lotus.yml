@@ -30,8 +30,8 @@
     
     - name: make-ffi-build
       ansible.builtin.shell:
-        cmd: make clean 
-        chdir: /root/lotus/lotus
+        cmd: make-ffi-build
+        chdir: /root/lotus
     
     - name: Ansible apt upgrade
       register: updatesys
