@@ -11,6 +11,12 @@
           - wget
         state: present
 
+    - import_role:
+        name: abdennour.golang
+      vars:
+        golang_version: "1.21.2"
+      become: yes
+      
     - name: Git checkout
       ansible.builtin.git:
         repo: 'https://github.com/filecoin-project/lotus.git'
