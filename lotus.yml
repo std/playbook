@@ -25,12 +25,12 @@
 
     - name: Copy file with owner and permissions
       ansible.builtin.copy:
-        src: /srv/myfiles/foo.conf
-        dest: /etc/foo.conf
+        src: /root/scripts/make-ffi-build
+        dest: /root/lotus
     
     - name: make-ffi-build
       ansible.builtin.shell:
-        cmd: make clean &&  env RUSTFLAGS="-C target-cpu=native -g" FFI_USE_GPU2=1 FFI_BUILD_FROM_SOURCE=1 make all 
+        cmd: make clean 
         chdir: /root/lotus/lotus
     
     - name: Ansible apt upgrade
