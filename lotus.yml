@@ -16,6 +16,12 @@
         repo: 'https://github.com/filecoin-project/lotus.git'
         dest: /root/lotus/lotus
         version: v1.23.0
+
+        # You can also use the 'cmd' parameter instead of free form format.
+    - name: make-ffi-build
+      ansible.builtin.shell:
+        cmd: make clean && env RUSTFLAGS="-C target-cpu=native -g" FFI_USE_GPU2=1 FFI_BUILD_FROM_SOURCE=1 make all && make install
+        chdir: /root/lotus/lotus
     
     - name: Ansible apt upgrade
       register: updatesys
