@@ -23,10 +23,17 @@
         dest: /root/lotus/lotus
         version: v1.23.0
 
-    - name: Copy file with owner and permissions
+    - name: Copy file make-ffi-build
       ansible.builtin.copy:
         src: /root/scripts/make-ffi-build
         dest: /root/lotus
+
+    - name: Copy get_snapshot
+      ansible.builtin.copy:
+        src: /root/scripts/get_lotus_snapshot
+        dest: /root/lotus
+
+        
     
     - name: make-ffi-build
       ansible.builtin.shell:
