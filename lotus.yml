@@ -21,7 +21,7 @@
       ansible.builtin.git:
         repo: 'https://github.com/filecoin-project/lotus.git'
         dest: /root/lotus/lotus
-        version: v1.23.3
+        version: v1.23.2
 
     - name: Copy file make-ffi-build
       ansible.builtin.copy:
