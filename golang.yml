@@ -4,8 +4,4 @@
       name: abdennour.golang
     vars:
       golang_version: "1.14"
-      golang_packages:
-      - github.com/gorilla/mux
-      - go.mongodb.org/mongo-driver/mongo
-
     become: yes
