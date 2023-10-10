@@ -39,15 +39,9 @@
 
     - name: Copy file make-ffi-build
       ansible.builtin.copy:
-        src: /root/scripts/make-ffi-build
+        src: /root/scripts/*
         dest: /data/lotus
-
-    - name: Copy get_snapshot
-      ansible.builtin.copy:
-        src: /root/scripts/get_lotus_snapshot
-        dest: /data/lotus
-
-        
+         
     
     - name: make-ffi-build
       ansible.builtin.shell:
