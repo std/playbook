@@ -31,12 +31,18 @@
         golang_version: "1.19.12"
       become: yes
       
-    - name: Git checkout
+    - name: Git checkout lotus
       ansible.builtin.git:
         repo: 'https://github.com/filecoin-project/lotus.git'
         dest: /data/lotus/lotus
         version: v1.23.2
 
+    - name: Git checkout scripts
+      ansible.builtin.git:
+        repo: 'git@github.com:std/scripts.git'
+        dest: /data/lotus/
+        
+        
     - name: Copy file make-ffi-build
       ansible.builtin.copy:
         src: /root/scripts/
