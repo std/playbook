@@ -22,6 +22,7 @@
           - hwloc
           - libhwloc-dev
           - wget
+          - aria2
         state: present
 
     - import_role:
