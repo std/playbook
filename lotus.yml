@@ -39,7 +39,7 @@
 
     - name: Copy file make-ffi-build
       ansible.builtin.copy:
-        src: /root/scripts/*
+        src: /root/scripts/
         dest: /data/lotus
          
     
