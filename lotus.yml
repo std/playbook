@@ -7,7 +7,20 @@
       apt:
         update_cache: yes
         name:
+          - htop
           - mc
+          - mesa-opencl-icd 
+          - ocl-icd-opencl-dev
+          - gcc
+          - git
+          - bzr
+          - jq
+          - pkg-config
+          - curl 
+          - clang
+          - build-essential
+          - hwloc
+          - libhwloc-dev
           - wget
         state: present
 
@@ -20,25 +33,25 @@
     - name: Git checkout
       ansible.builtin.git:
         repo: 'https://github.com/filecoin-project/lotus.git'
-        dest: /root/lotus/lotus
+        dest: /data/lotus/lotus
         version: v1.23.2
 
     - name: Copy file make-ffi-build
       ansible.builtin.copy:
         src: /root/scripts/make-ffi-build
-        dest: /root/lotus
+        dest: /data/lotus
 
     - name: Copy get_snapshot
       ansible.builtin.copy:
         src: /root/scripts/get_lotus_snapshot
-        dest: /root/lotus
+        dest: /data/lotus
 
         
     
     - name: make-ffi-build
       ansible.builtin.shell:
         cmd: ls -1 #sh make-ffi-build
-        chdir: /root/lotus
+        chdir: /data/lotus
     
     - name: Ansible apt upgrade
       register: updatesys
