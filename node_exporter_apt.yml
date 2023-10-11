@@ -1,5 +1,5 @@
 - name: Ansible apt module 
-  hosts: all-lotus
+  hosts: all-node-exporter
   become: yes
   tasks:
     - name: Ansible apt to install multiple packages -
