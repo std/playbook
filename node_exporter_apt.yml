@@ -1,5 +1,5 @@
 - name: Ansible apt module 
-  hosts: tmpl
+  hosts: all-lotus
   become: yes
   tasks:
     - name: Ansible apt to install multiple packages -
@@ -7,9 +7,6 @@
       apt:
         update_cache: yes
         name:
-          - htop
-          - mc
-          - mesa-opencl-icd 
           - prometheus-node-exporter
         state: present
     - name: Ansible apt upgrade
